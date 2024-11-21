@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getProducts } from '../../../../ShoppingExample/shopping-ui/src/services/api';
+import{getProducts} from "../services/api";
+
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => { getProducts().then((response) => setProducts(response.data));}
